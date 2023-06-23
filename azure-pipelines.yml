@@ -29,7 +29,7 @@ steps:
     configuration: '$(buildConfiguration)'
 - task: CopyFiles@2
   inputs:
-    SourceFolder: '$(solution)'
+    SourceFolder: '$(system.defaultworkingdirectory)'
     Contents: '**'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
 - task: PublishPipelineArtifact@1
